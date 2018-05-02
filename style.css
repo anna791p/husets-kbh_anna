@@ -7,3 +7,26 @@ li a{
 ul li {
     list-style-type: none;
 }
+
+.game {
+    border: 1px solid #000;
+    padding: 1.5em;
+}
+
+.headimg {
+    width: auto;
+    height: 200px;
+    background-color: green;
+}
+
+.linkevent {
+    border: 2px solid #000;
+    padding: 2em;
+    margin: 1em;
+}
+
+.linkfood {
+    border: 2px solid #000;
+    padding: 2em;
+    margin: 1em;
+}
