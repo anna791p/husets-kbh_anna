@@ -1,6 +1,6 @@
 
 function fetchGameEvents(){
-    fetch("http://annabellegoldsworthy.com/wordpress/wp-json/wp/v2/board_games")
+    fetch("http://annabellegoldsworthy.com/wordpress/wp-json/wp/v2/board_games?_embed")
         .then(e => e.json())
         .then(showGames)
 }
@@ -11,16 +11,24 @@ function showGames(data){
 }
 
 function showSingleEvent(gEvent){
-    console.log(gEvent)
+    //console.log(gEvent._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url);
     let template = document.querySelector("#bgetemp").content;
     let clone = template.cloneNode(true);
-
     clone.querySelector("h1").textContent = gEvent.title.rendered;
     clone.querySelector(".descript").innerHTML = gEvent.content.rendered;
     clone.querySelector(".date").textContent = gEvent.acf.date;
     clone.querySelector(".time").textContent = gEvent.acf.time;
     clone.querySelector(".venue").textContent = gEvent.acf.venue;
     clone.querySelector(".price").textContent = gEvent.acf.price;
+
+
+    if(gEvent._embedded["wp:featuredmedia"]){  //img is there
+    clone.querySelector(".eventimg").setAttribute("src", gEvent._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
+   }  else {  // no img
+        clone.querySelector(".eventimg").remove();
+   }
+
+    // can i use the above for the description thing with food??
 
     let gamelist = document.querySelector("#gamelist");
     gamelist.appendChild(clone);
