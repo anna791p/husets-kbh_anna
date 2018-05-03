@@ -29,9 +29,35 @@ fetchGameEvents();
 
 
 
+
+
+
 function fetchEdibles(){
-    fetch()
+    fetch("http://annabellegoldsworthy.com/wordpress/wp-json/wp/v2/food")
+        .then(e => e.json())
+        .then(showFooDrink)
+}
+
+function showFooDrink(data){
+    console.log(data);
+    data.forEach(showSingleItem)
+}
+
+function showSingleItem(someFood){
+    console.log(someFood)
+    let template = document.querySelector("#fdtemp").content;
+    let clone = template.cloneNode(true);
+
+    clone.querySelector("h1").textContent = someFood.title.rendered;
+    //clone.querySelctor(".descript").innerHTML = someFood.content.rendered;
+    clone.querySelector(".price span").textContent = someFood.acf.price;
+
+    let fooddrinklist = document.querySelector("#fooddrinklist");
+    fooddrinklist.appendChild(clone);
+
 
 }
+fetchEdibles();
+
 
 
