@@ -10,18 +10,37 @@
 <body>
 
     <!-- NAV???, TITLE AT TOP -->
-    <ul>
-        <li><a href="index.html">Bastard Café</a></li>
-        <li><a href="games.html">Boardgame Events</a></li>
-        <li><a href="fooddrink.html">Food &amp; Drink</a></li>
-        <li><a href="contact.html">Find Us</a></li>
-    </ul>
+
+    <nav id="myNav" class="overlay">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">close;
+
+        </a>
+
+        <div class="overlay-content">
+            <ul>
+                <li><a href="index.html">Bastard Café</a></li>
+                <li><a href="games.html">Boardgame Events</a></li>
+                <li><a href="fooddrink.html">Food &amp; Drink</a></li>
+                <li><a href="contact.html">Find Us</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <span onclick="openNav()">
+        <div class="burgmenu">
+            <div class="burger"></div>
+            <div class="burger"></div>
+            <div class="burger"></div>
+        </div>
+    </span>
 
 
     <h1 class="pagetitle">Bastard Café</h1>
 
     <!--<div class="headimg">-->
-        <img class="headimg" src="img/bgcafe.jpg" alt="man looking at boardgames">
+    <img class="headimg" src="img/bgcafe.jpg" alt="man looking at boardgames">
     <!--</div> -->
 
     <p>Bastard Café is a café for board games, card games, coffee and 'hygge' in Copenhagen.</p>
@@ -31,10 +50,14 @@
     <p>Single Day, Membership prices?</p>
     <p>Find us on here?? the address and opening hours?</p>
 
-    <a href="games.html"><div class="linkevent">BOARDGAME EVENTS</div></a>
+    <a href="games.html">
+        <div class="linkevent">BOARDGAME EVENTS</div>
+    </a>
 
-    <a href="fooddrink.html"><div class="linkfood">FOOD &amp; DRINKS</div></a>
+    <a href="fooddrink.html">
+        <div class="linkfood">FOOD &amp; DRINKS</div>
+    </a>
 
-    <script src=""></script>
+    <script src="menu.js"></script>
 </body>
 </html>

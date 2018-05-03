@@ -9,12 +9,30 @@
 
 <body>
 
+    <nav id="myNav" class="overlay">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">close;
+
+        </a>
+
+        <div class="overlay-content">
     <ul>
         <li><a href="index.html">Bastard Café</a></li>
         <li><a href="games.html">Boardgame Events</a></li>
         <li><a href="fooddrink.html">Food &amp; Drink</a></li>
         <li><a href="contact.html">Find Us</a></li>
     </ul>
+        </div>
+
+    </nav>
+
+    <span onclick="openNav()">
+        <div class="burgmenu">
+            <div class="burger"></div>
+            <div class="burger"></div>
+            <div class="burger"></div>
+        </div>
+    </span>
 
     <h1 class="pagetitle">Boardgame Events</h1>
 
@@ -38,5 +56,6 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="menu.js"></script>
 </body>
 </html>

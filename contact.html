@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +10,41 @@
 
 <body>
 
+
+    <nav id="myNav" class="overlay">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">close;
+
+        </a>
+
+        <div class="overlay-content">
     <ul>
         <li><a href="index.html">Bastard Café</a></li>
         <li><a href="games.html">Boardgame Events</a></li>
         <li><a href="fooddrink.html">Food &amp; Drink</a></li>
         <li><a href="contact.html">Find Us</a></li>
     </ul>
+        </div>
+
+    </nav>
+
+    <span onclick="openNav()">
+        <div class="burgmenu">
+            <div class="burger"></div>
+            <div class="burger"></div>
+            <div class="burger"></div>
+        </div>
+    </span>
 
     <h1 class="pagetitle">Find Us</h1>
 
-    <script src=""></script>
+    <h2>Address</h2>
+    <p>Rådhusstræde 13, 1466 København</p>
+
+    <h2>Opening Hours</h2>
+    <p>The café is open for gaming, coffee, beer and fun at these times during the week: <br> Monday-Thursday: 12.00-00.00 Friday &amp; Saturday: 12.00-02.00 Sunday: 12.00-00.00 NOTE on national holidays etc.: The café is open ALL DAYS OF THE YEAR except 24, 25, 26 & 31 December + 1 January. We are thus open on all other holidays during the year (and are mostly quite busy since, well, people are off work and have time for even more gaming of course). Downstairs Wednesday-Friday: 16.00-00.00 Saturday: 13.00-00.00 Sunday: 13.00-22.00 It’s always possible to try out a game from our game library, but if you would like a bit of help with the rules, we often have friendly volunteer game gurus ready to help you out.</p>
+
+    <script src="menu.js"></script>
 </body>
+
 </html>
